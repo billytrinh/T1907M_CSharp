@@ -18,10 +18,11 @@ namespace ConsoleApp1.Lab_2_3
             this.gallery = new List<string>();
         }
 
-        public Product(int id, string name, uint qty, string image, string desc, List<string> gallery)
+        public Product(int id, string name,double price, uint qty, string image, string desc, List<string> gallery)
         {
             this.id = id;
             this.name = name;
+            this.price = price;
             this.qty = qty;
             this.image = image;
             this.desc = desc;

@@ -7,8 +7,8 @@ namespace ConsoleApp1.Lab_2_3
         private string color;
         private int size;
 
-        public Fashion(int id, string name, uint qty, string image, string desc, List<string> gallery,
-            string color, int size):base(id, name, qty, image, desc, gallery)
+        public Fashion(int id, string name,double price, uint qty, string image, string desc, List<string> gallery,
+            string color, int size):base(id, name,price, qty, image, desc, gallery)
         {
             this.color = color;
             this.size = size;

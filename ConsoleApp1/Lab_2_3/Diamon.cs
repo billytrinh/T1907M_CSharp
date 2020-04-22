@@ -6,8 +6,8 @@ namespace ConsoleApp1.Lab_2_3
     {
         private uint cara;
 
-        public Diamon(int id, string name, uint qty, string image, string desc, List<string> gallery, uint cara
-        ):base(id, name, qty, image, desc, gallery)
+        public Diamon(int id, string name,double price, uint qty, string image, string desc, List<string> gallery, uint cara
+        ):base(id, name,price, qty, image, desc, gallery)
         {
             this.cara = cara;
         }
