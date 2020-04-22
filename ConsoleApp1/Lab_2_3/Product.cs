@@ -7,7 +7,7 @@ namespace ConsoleApp1.Lab_2_3
     {
         protected int id;
         protected string name;
-        public double price;
+        protected double price;
         protected uint qty;
         protected string image;
         protected string desc;
@@ -27,6 +27,42 @@ namespace ConsoleApp1.Lab_2_3
             this.image = image;
             this.desc = desc;
             this.gallery = gallery;
+        }
+
+        public int Id // khai bao 1 properties
+        {
+            get { return id; }// ham tra ve gia tri - read
+            //set { this.id = value; } // ham set gia tri -- write
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set { this.name = value; }
+        }
+
+        public double Price
+        {
+            get { return price; }
+            set { this.price = value; }
+        }
+
+        public uint Qty
+        {
+            get => qty; // lambda expression
+            set => qty = value;
+        }
+
+        public string Image
+        {
+            get => image;
+            set => image = value;
+        }
+
+        public string Desc
+        {
+            get => desc;
+            set => desc = value;
         }
 
         public void GetInfo()

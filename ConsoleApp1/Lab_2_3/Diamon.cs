@@ -11,7 +11,17 @@ namespace ConsoleApp1.Lab_2_3
         {
             this.cara = cara;
         }
-        
+
+        public uint Cara
+        {
+            get { return cara + 10; }
+            set
+            {
+                if (value > 5) cara = value;
+                else cara = 5;
+            }
+        }
+
         public bool IsReal()
         {
             if(cara>5) return true;

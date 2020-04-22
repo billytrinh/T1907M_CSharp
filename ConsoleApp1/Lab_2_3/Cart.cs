@@ -21,6 +21,42 @@ namespace ConsoleApp1.Lab_2_3
             this.country = country;
         }
 
+        public int Id
+        {
+            get => id;
+            set => id = value;
+        }
+
+        public string Customer
+        {
+            get => customer;
+            set => customer = value;
+        }
+
+        public double GrandTotal
+        {
+            get => grandTotal;
+            set => grandTotal = value;
+        }
+
+        public List<Product> ListProduct
+        {
+            get => listProduct;
+            set => listProduct = value;
+        }
+
+        public string City
+        {
+            get => city;
+            set => city = value;
+        }
+
+        public string Country
+        {
+            get => country;
+            set => country = value;
+        }
+
         public bool AddProduct(Product product)
         {
             listProduct.Add(product);
@@ -39,11 +75,11 @@ namespace ConsoleApp1.Lab_2_3
             double grand = 0;
             foreach (Product p in listProduct)
             {
-                grand += p.price;
+                grand += p.Price; // chay vao ham get trong properties
             }
 
             grand += ShippingFee(grand);
-            this.grandTotal = grand;
+            this.GrandTotal = grand;// chay vao ham set trong properties
             return grandTotal;
         }
 
