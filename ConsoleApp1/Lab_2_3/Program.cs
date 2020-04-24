@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using ConsoleApp1.Session5.MyNamespace;
 
 namespace ConsoleApp1.Lab_2_3
 {
@@ -37,6 +38,8 @@ namespace ConsoleApp1.Lab_2_3
                Console.WriteLine(p1[i]);
            }
 
+           ConsoleApp1.Session5.Program.ProgramCode = 100;
+           MyClass mc = new MyClass();
         }
     }
 }
