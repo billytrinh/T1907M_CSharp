@@ -13,6 +13,8 @@ namespace ConsoleApp1.Lab_2_3
         protected string desc;
         protected List<string> gallery;
 
+        private static int yearCode;
+        
         public Product()
         {
             this.gallery = new List<string>();
@@ -27,6 +29,18 @@ namespace ConsoleApp1.Lab_2_3
             this.image = image;
             this.desc = desc;
             this.gallery = gallery;
+        }
+
+        public string this[int index]
+        {
+            get { return gallery[index]; }
+            set { gallery[index] = value; }
+        }
+        
+        public static int YearCode  // static properties
+        {
+            get => yearCode;
+            set => yearCode = value;
         }
 
         public int Id // khai bao 1 properties
@@ -63,6 +77,12 @@ namespace ConsoleApp1.Lab_2_3
         {
             get => desc;
             set => desc = value;
+        }
+
+        public List<string> Gallery
+        {
+            get => gallery;
+            //set => gallery = value;
         }
 
         public void GetInfo()
