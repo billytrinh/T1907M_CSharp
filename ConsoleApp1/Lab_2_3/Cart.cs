@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 
 namespace ConsoleApp1.Lab_2_3
 {
+    public delegate void ShowAlert(string msg);
     public class Cart
     {
         private int id;
@@ -11,6 +13,7 @@ namespace ConsoleApp1.Lab_2_3
         private string city;
         private string country;
 
+        private event ShowAlert AddToCart;
         public Cart(int id, string customer, double grandTotal, List<Product> listProduct, string city, string country)
         {
             this.id = id;
@@ -19,8 +22,17 @@ namespace ConsoleApp1.Lab_2_3
             this.listProduct = listProduct;
             this.city = city;
             this.country = country;
+            if (AddToCart == null)
+            {
+                AddToCart += AlertMessage;
+            }
         }
 
+        public static void AlertMessage(string msg)
+        {
+            Console.WriteLine(msg);
+        }
+        
         public int Id
         {
             get => id;
@@ -61,6 +73,8 @@ namespace ConsoleApp1.Lab_2_3
         {
             listProduct.Add(product);
             // them tien trong grandTotal
+            // phat su kien
+            AddToCart("Da them san pham " + product.Name + " vao gio hang");
             return true;
         }
 

@@ -14,10 +14,15 @@ namespace ConsoleApp1.Lab_2_3
         protected List<string> gallery;
 
         private static int yearCode;
-        
+
+        private event ShowAlert ChangeQty;
         public Product()
         {
             this.gallery = new List<string>();
+            if (ChangeQty == null)
+            {
+                ChangeQty += Cart.AlertMessage;
+            }
         }
 
         public Product(int id, string name,double price, uint qty, string image, string desc, List<string> gallery)
@@ -29,6 +34,10 @@ namespace ConsoleApp1.Lab_2_3
             this.image = image;
             this.desc = desc;
             this.gallery = gallery;
+            if (ChangeQty == null)
+            {
+                ChangeQty += Cart.AlertMessage;
+            }
         }
 
         public string this[int index]
@@ -64,7 +73,14 @@ namespace ConsoleApp1.Lab_2_3
         public uint Qty
         {
             get => qty; // lambda expression
-            set => qty = value;
+            set
+            {
+                if (qty != 0)
+                {
+                    ChangeQty("So luong san pham da duoc chinh sua");
+                }
+                qty = value;
+            }
         }
 
         public string Image

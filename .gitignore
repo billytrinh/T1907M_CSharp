@@ -7,3 +7,15 @@
 /.idea/.idea.ConsoleApp1/.idea/projectSettingsUpdater.xml
 /.idea/.idea.ConsoleApp1/riderModule.iml
 /.idea/.idea.ConsoleApp1/.idea/vcs.xml
+/WpfApp1/App.xaml
+/WpfApp1/App.xaml.cs
+/WpfApp1/AssemblyInfo.cs
+/WpfApp1/MainWindow.xaml
+/WpfApp1/MainWindow.xaml.cs
+/WpfApp1/obj/project.assets.json
+/WpfApp1/obj/project.packagespec.json
+/WpfApp1/WpfApp1.csproj
+/WpfApp1/obj/WpfApp1.csproj.nuget.cache
+/WpfApp1/obj/WpfApp1.csproj.nuget.dgspec.json
+/WpfApp1/obj/WpfApp1.csproj.nuget.g.props
+/WpfApp1/obj/WpfApp1.csproj.nuget.g.targets
